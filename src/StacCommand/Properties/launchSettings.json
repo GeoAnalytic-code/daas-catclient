@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StacCommand": {
+      "commandName": "Project",
+      "commandLineArgs": "https://earthengine-stac.storage.googleapis.com/catalog/catalog.json"
+    }
+  }
+}
