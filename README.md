@@ -16,7 +16,6 @@
 -->
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
-![GitHub Workflow Status][workflow-shield]
 
 <br />
 <p align="center">
