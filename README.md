@@ -65,12 +65,23 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This code may be used to create a STAC client using C#.
+This code may be used to create a STAC client using C#. [STAC] (https://stacspec.org/) is a specification for transferring metadata in JSON format between a STAC server and a STAC client.  The metadata describes spatio-temporal data such as satellite imagery.  While other exapmles of STAC clients are written in JavaScript, this STAC client is written in C#.
 
 ### Built With
 
 * [DotNetStac](https://github.com/Terradue/DotNetStac)
 
+## Getting Started
+### Installation
+This client must be built using Microsoft's Visual Studio.  Clone this repository using git (or download the zip), open the StacCommand.sln with Visual Studio and build the project.
+
+## Usage
+Once you've built the StacCommand executable, you can execute staccommand.exe:
+```
+staccommand.exe
+usage:
+staccommand <stac Uri>
+```
 
 <!-- ROADMAP -->
 ## Roadmap
