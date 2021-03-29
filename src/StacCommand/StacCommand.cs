@@ -43,16 +43,22 @@ namespace StacCommand
                 return;
             }
 
-            catalog_any_version = (IStacCatalog)StacFactory.Load(args[0]);
-            catalog = catalog_any_version.UpgradeToCurrentVersion();
+            try
+            {
+                catalog_any_version = (IStacCatalog)StacFactory.Load(args[0]);
+                catalog = catalog_any_version.UpgradeToCurrentVersion();
 
-            Console.Out.WriteLine("STAC URI: " + catalog_any_version.Uri);
-            Console.Out.WriteLine("Catalog ID:" + catalog_any_version.Id);
-            Console.Out.WriteLine("Description: " + catalog_any_version.Description);
-            Console.Out.WriteLine("STAC Version: " + catalog_any_version.StacVersion);
+                Console.Out.WriteLine("STAC URI: " + catalog_any_version.Uri);
+                Console.Out.WriteLine("Catalog ID:" + catalog_any_version.Id);
+                Console.Out.WriteLine("Description: " + catalog_any_version.Description);
+                Console.Out.WriteLine("STAC Version: " + catalog_any_version.StacVersion);
 
-
-            ListChildrensItemsAndAssets(catalog);
+                ListChildrensItemsAndAssets(catalog);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error: " + ex.Message);
+            }
 
         }
 
