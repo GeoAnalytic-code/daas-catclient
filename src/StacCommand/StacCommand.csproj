@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetStac" Version="0.5.8" />
+    <PackageReference Include="DotNetStac" Version="0.6.2" />
     <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="TimePeriodLibrary.NET" Version="2.1.1" />

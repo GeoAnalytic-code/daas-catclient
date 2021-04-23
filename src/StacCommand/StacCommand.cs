@@ -9,7 +9,7 @@ namespace StacCommand
 {
     class StacCommand
     {
-        public static void ListChildrensItemsAndAssets(IStacCatalog catalog, string prefix = "", int limit = 2)
+        public static void ListChildrensItemsAndAssets(IStacCatalog catalog, string prefix = "", int limit = 200)
         {
             // Get children first (sub catalogs and collections)
             foreach (var child_any_version in catalog.GetChildren().Values.Take(limit) )
@@ -33,8 +33,12 @@ namespace StacCommand
 
         static void Main(string[] args)
         {
+            int limit = 200;
+
             IStacCatalog catalog_any_version;
             IStacCatalog catalog;
+
+            Console.Out.WriteLine("Max items listed: " + limit);
 
             if ( args.Length <= 0) 
             {
@@ -53,7 +57,7 @@ namespace StacCommand
                 Console.Out.WriteLine("Description: " + catalog_any_version.Description);
                 Console.Out.WriteLine("STAC Version: " + catalog_any_version.StacVersion);
 
-                ListChildrensItemsAndAssets(catalog);
+                ListChildrensItemsAndAssets(catalog, "", limit);
             }
             catch (Exception ex)
             {

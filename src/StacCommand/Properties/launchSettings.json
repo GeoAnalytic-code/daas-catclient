@@ -2,7 +2,7 @@
   "profiles": {
     "StacCommand": {
       "commandName": "Project",
-      "commandLineArgs": "https://earthengine-stac.storage.googleapis.com/catalog/catalog.json"
+      "commandLineArgs": "https://www.geoanalytic.com/v0.json"
     }
   }
 }
